@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_bg"
+    android:padding="25dp"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/mainContainer"
+       android:visibility="visible">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:id="@+id/adressContainer"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="24sp"
+               android:id="@+id/adress"
+               android:text="Location">
+
+           </TextView>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/updated_at"
+               android:textSize="14sp"
+               android:text="Updated at">
+
+           </TextView>
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:id="@+id/overviewContainer"
+           android:layout_centerInParent="true">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/status"
+              android:text="Clear Sky"
+              android:layout_gravity="center">
+
+          </TextView>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/temp"
+               android:textSize="90sp"
+               android:fontFamily="sans-serif-black"
+               android:layout_gravity="center"
+               android:text="24'C">
+
+           </TextView>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/temp_min"
+                   android:text="Min temp">
+
+               </TextView>
+              <Space
+                  android:layout_width="50dp"
+                  android:layout_height="wrap_content"></Space>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/temp_max"
+                   android:text="Max temp">
+
+               </TextView>
+
+           </LinearLayout>
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/detailsContainer"
+           android:orientation="vertical"
+           android:layout_alignParentBottom="true">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:weightSum="3">
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:padding="8dp"
+                   android:background="#3CF1EBF1">
+                   <ImageView
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:src="@drawable/sunrise"
+                       app:tint="#FFF"> </ImageView>
+                   <Space
+                       android:layout_width="5dp"
+                       android:layout_height="wrap_content"></Space>
+                   <TextView
+
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Sunrise"
+                       android:textSize="12sp"/>
+                   <TextView
+                       android:id="@+id/sunrise"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="5:30am"
+                       android:textSize="14sp"/>
+
+               </LinearLayout>
+               <Space
+                   android:layout_width="10dp"
+                   android:layout_height="wrap_content"></Space>
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:padding="8dp"
+                   android:background="#3CF1EBF1">
+                   <ImageView
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:src="@drawable/sunset"
+                       app:tint="#FFF"> </ImageView>
+                   <Space
+                       android:layout_width="5dp"
+                       android:layout_height="wrap_content"></Space>
+                   <TextView
+
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Sunset"
+                       android:textSize="12sp"/>
+                   <TextView
+                       android:id="@+id/sunset"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="5:30pm"
+                       android:textSize="14sp"/>
+
+               </LinearLayout>
+               <Space
+                   android:layout_width="10dp"
+                   android:layout_height="wrap_content"></Space>
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:padding="8dp"
+                   android:background="#3CF1EBF1">
+                   <ImageView
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:src="@drawable/wind"
+                       app:tint="#FFF"> </ImageView>
+                   <Space
+                       android:layout_width="5dp"
+                       android:layout_height="wrap_content"></Space>
+                   <TextView
+
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="wind"
+                       android:textSize="12sp"/>
+                   <TextView
+                       android:id="@+id/wind"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="5:30pm"
+                       android:textSize="14sp"/>
+
+               </LinearLayout>
+               <Space
+                   android:layout_width="10dp"
+                   android:layout_height="wrap_content"></Space>
+
+           </LinearLayout>
+           <Space
+               android:layout_width="wrap_content"
+               android:layout_height="10dp"></Space>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:weightSum="3">
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:padding="8dp"
+                   android:background="#3CF1EBF1">
+                   <ImageView
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:src="@drawable/pressure"
+                       app:tint="#FFF"> </ImageView>
+                   <Space
+                       android:layout_width="5dp"
+                       android:layout_height="wrap_content"></Space>
+                   <TextView
+
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="pressure"
+                       android:textSize="12sp"/>
+                   <TextView
+                       android:id="@+id/pressure"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="5:30am"
+                       android:textSize="14sp"/>
+
+               </LinearLayout>
+               <Space
+                   android:layout_width="10dp"
+                   android:layout_height="wrap_content"></Space>
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:padding="8dp"
+                   android:background="#3CF1EBF1">
+                   <ImageView
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:src="@drawable/humidity"
+                       app:tint="#FFF"> </ImageView>
+                   <Space
+                       android:layout_width="5dp"
+                       android:layout_height="wrap_content"></Space>
+                   <TextView
+
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Sunset"
+                       android:textSize="12sp"/>
+                   <TextView
+                       android:id="@+id/humidity"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="5:30pm"
+                       android:textSize="14sp"/>
+
+               </LinearLayout>
+               <Space
+                   android:layout_width="10dp"
+                   android:layout_height="wrap_content"></Space>
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:padding="8dp"
+                   android:background="#3CF1EBF1">
+                   <ImageView
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:src="@drawable/info"
+                       app:tint="#FFF"> </ImageView>
+                   <Space
+                       android:layout_width="5dp"
+                       android:layout_height="wrap_content"></Space>
+                   <TextView
+
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Created by"
+                       android:textSize="12sp"/>
+                   <TextView
+                       android:id="@+id/info"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Innov_Max"
+                       android:textSize="14sp"/>
+
+               </LinearLayout>
+               <Space
+                   android:layout_width="10dp"
+                   android:layout_height="wrap_content"></Space>
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+   </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/errorText"
+        android:layout_centerInParent="true"
+        android:text="something went wrong"
+        android:visibility="gone"/>
+
+</RelativeLayout>
