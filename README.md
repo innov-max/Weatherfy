@@ -23,8 +23,8 @@ Usage
 
 # API Key
 
-### To use the OpenWeatherMap API, you'll need to obtain an API key. You can sign up for a free API key on the OpenWeatherMap website. Once you have your API key, you'll need to add it to the gradle.properties file in the project.
-Acknowledgements
+ To use the OpenWeatherMap API, you'll need to obtain an API key. You can sign up for a free API key on the OpenWeatherMap website. Once you have your API key, you'll need to add it to the gradle.properties file in the project.
+### Acknowledgements
 
 This app was built using the OpenWeatherMap API and the Kotlin programming language. The beautiful design and user interface was created using the Material Design guidelines from Google.
 License
