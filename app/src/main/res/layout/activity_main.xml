@@ -46,7 +46,22 @@
            android:id="@+id/overviewContainer"
            android:layout_centerInParent="true">
 
-          <TextView
+           <com.airbnb.lottie.LottieAnimationView
+               android:id="@+id/animationView"
+               android:layout_width="200dp"
+               android:layout_height="148dp"
+               android:layout_gravity="center"
+               android:layout_marginBottom="10dp"
+               android:layout_marginTop="10dp"
+               app:lottie_autoPlay="true"
+               app:lottie_loop="true"
+               app:lottie_rawRes="@raw/weather" />
+
+
+
+
+
+           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:id="@+id/status"
@@ -54,14 +69,15 @@
               android:layout_gravity="center">
 
           </TextView>
+
            <TextView
+               android:id="@+id/temp"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:id="@+id/temp"
-               android:textSize="90sp"
-               android:fontFamily="sans-serif-black"
                android:layout_gravity="center"
-               android:text="24'C">
+               android:fontFamily="sans-serif-black"
+               android:text="24C"
+               android:textSize="80sp">
 
            </TextView>
            <LinearLayout
@@ -263,7 +279,7 @@
 
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Sunset"
+                       android:text="Humidity"
                        android:textSize="12sp"/>
                    <TextView
                        android:id="@+id/humidity"

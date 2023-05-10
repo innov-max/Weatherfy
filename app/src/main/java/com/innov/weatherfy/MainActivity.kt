@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         override fun doInBackground(vararg params: String?): String? {
             var response: String?
             try {
-                response = URL("https://api.openweathermap.org/data/2.5/weather?q=$CITY&units=metric&appid=$API")
+                response = URL("https://api.openweathermap.org/data/2.5/weather?lat=1.2921&lon=36.8219&appid=a22dec80ac66ad45dd7084b8a37a70e3")
                     .readText(Charsets.UTF_8)
             }
             catch (e: java.lang.Exception){
@@ -57,14 +57,14 @@ class MainActivity : AppCompatActivity() {
                 val weather = jsonObj.getJSONArray("weather").getJSONObject(0)
                 val updatedAt:Long = jsonObj.getLong("dt")
                 val updatedAtText = "Updated at :" + SimpleDateFormat("dd/MM/yyyy hh:mm a", Locale.ENGLISH).format(Date(updatedAt*1000))
-                val temp = main.getString("temp")+ "'C"
-                val tempMin = "Min Temp" +main.getString("temp_min")+ "'C"
-                val tempMax = "Max Temp" +main.getString("temp_max")+ "'C"
+                val temp = main.getString("temp")+ " 'F"
+                val tempMin = "Min Temp" +main.getString("temp_min")+ " 'F"
+                val tempMax = "Max Temp" +main.getString("temp_max")+ " 'F"
                 val pressure = main.getString("pressure")
-                val humidity = main.getString("humidity")
-                val sunrise:Long = sys.getLong("sunrise")
-                val sunset:Long = sys.getLong("sunset")
-                val windSpeed = wind.getString("speed")
+                val humidity = main.getString("humidity")+" g.m-3 "
+                val Sunrise:Long = sys.getLong("sunrise")
+                val Sunset:Long = sys.getLong("sunset")
+                val windSpeed = wind.getString("speed")+" Knots"
                 val weatherDescription = weather.getString("description")
                 val address = jsonObj.getString("name") +"," +sys.getString("country")
 
