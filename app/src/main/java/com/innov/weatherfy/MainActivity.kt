@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         override fun doInBackground(vararg params: String?): String? {
             var response: String?
             try {
-                response = URL("https://api.openweathermap.org/data/2.5/weather?lat=1.2921&lon=36.8219&appid=a22dec80ac66ad45dd7084b8a37a70e3")
+                response = URL("https://api.openweathermap.org/data/2.5/weather?lat=36.8120696734417&lon=-1.3092052453283571&appid=d9424404761e755172e16c39969dd32e")
                     .readText(Charsets.UTF_8)
             }
             catch (e: java.lang.Exception){
